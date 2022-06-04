@@ -9,27 +9,75 @@ output: ioslides_presentation
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## R Markdown
+## Intro
 
-This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+## References
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+- [Advanced R](https://adv-r.hadley.nz)
+- [R Packages](https://r-pkgs.org)
 
-## Slide with Bullets
+## Tools
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+- [library(devtools)](https://devtools.r-lib.org)
+- [library(usethis)](https://usethis.r-lib.org/index.html)
 
-## Slide with R Output
+## Version Control
 
-```{r cars, echo = TRUE}
-summary(cars)
-```
+### Level 1
+- Git
 
-## Slide with Plot
+- Github
+- Bitbucket
 
-```{r pressure}
-plot(pressure)
-```
+### Level 2
+- Branches
+- Pull requests
+- Git Flow
+
+## It Works on My Machine!
+
+### Level 1
+- [library(renv)](https://rstudio.github.io/renv/)
+
+## Coding Standard
+
+### Level 1
+- [Tidyverse style guide](https://style.tidyverse.org)
+
+### Level 2
+- [library(lintr)](https://lintr.r-lib.org)
+- [library(styler)](https://styler.r-lib.org)
+
+## Modularize Code
+
+### Level 1
+- [functions](https://adv-r.hadley.nz/functions.html)
+
+### Level 2
+- [R6 classes](https://adv-r.hadley.nz/r6.html)
+
+## Safe Code
+
+- tryCatch
+- assertions
+
+## Document Code
+
+- [library(roxygen2)](https://roxygen2.r-lib.org)
+- [vignette](https://r-pkgs.org/vignettes.html)
+
+## Test your code
+
+### Level 1
+- [library(testthat)](https://testthat.r-lib.org)
+
+## It Works on My Machine! Part 2
+
+### Level 2
+- Docker
+
+## Test your code Part 2
+
+### Level 2
+- CICD
 
