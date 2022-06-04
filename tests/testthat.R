@@ -8,6 +8,4 @@
 
 library(testthat)
 
-source_dir("../R")
-
-test_dir("testthat")
+test_dir("tests/testthat")
