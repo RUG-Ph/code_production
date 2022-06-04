@@ -13,7 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-      RENV_PATHS_ROOT: ~/.local/share/renv
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
@@ -28,18 +27,9 @@ jobs:
           sudo apt-get update && sudo apt-get install -u libcurl4-openssl-dev
 
       - name: Cache packages
-        uses: actions/cache@v2
+        uses: r-lib/actions/setup-renv@v2
         with:
-          path: ${{ env.RENV_PATHS_ROOT }}
-          key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-renv-
-
-      - name: Restore packages
-        shell: Rscript(0)
-        run: |
-          if (!requireNamesapce("renv", quietly = TRUE)) install.packages("renv")
-          renv::restore()
+          cache-version: 2
 
       - name: Lint root directory
         run: lintr::lint_dir()
