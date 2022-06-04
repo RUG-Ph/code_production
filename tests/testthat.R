@@ -8,3 +8,6 @@
 
 library(testthat)
 
+source_dir("../R")
+
+test_dir("testthat")
