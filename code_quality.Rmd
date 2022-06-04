@@ -1,5 +1,5 @@
 ---
-title: "Code Quality"
+title: "Code Production"
 author: "Rad Basa"
 date: "6/3/2022"
 output: ioslides_presentation
@@ -11,17 +11,64 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Intro
 
-## References
+## References For Your Code
 
 - [Advanced R](https://adv-r.hadley.nz)
 - [R Packages](https://r-pkgs.org)
 
-## Tools
+## Tools For Your Code
 
 - [library(devtools)](https://devtools.r-lib.org)
 - [library(usethis)](https://usethis.r-lib.org/index.html)
 
-## Version Control
+## Write Your Code
+
+- Choose one style
+  - indent spaces
+  - brackets
+  - camel case, snake case
+- Appropriate object names
+  - variable names
+  - function names
+
+### Level 1
+- [Tidyverse style guide](https://style.tidyverse.org)
+- [Google R style guide](https://google.github.io/styleguide/Rguide.html)
+
+### Level 2 Automate styling
+- [library(lintr)](https://lintr.r-lib.org)
+- [library(styler)](https://styler.r-lib.org)
+
+## Modularize Your Code
+
+### Level 1
+- [functions](https://adv-r.hadley.nz/functions.html)
+
+### Level 2
+- [R6 classes](https://adv-r.hadley.nz/r6.html)
+
+## Strengthen Your Code
+
+- [tryCatch()](https://adv-r.hadley.nz/conditions.html)
+- [library(checkmate)](https://mllg.github.io/checkmate)
+
+## Document Your Code
+
+- [library(roxygen2)](https://roxygen2.r-lib.org)
+- [vignette](https://r-pkgs.org/vignettes.html)
+
+## Test Your Code
+
+### Level 1
+- [library(testthat)](https://testthat.r-lib.org)
+- [library(checkmate)](https://mllg.github.io/checkmate)
+
+## Manage Your Code
+
+- data_analysis.R
+- data_analysis_1.R
+- data_analysis_2.R
+- data_analysis_xxxx.R
 
 ### Level 1
 - Git
@@ -34,50 +81,16 @@ knitr::opts_chunk$set(echo = FALSE)
 - Pull requests
 - Git Flow
 
-## It Works on My Machine!
+## Run Your Code
 
 ### Level 1
 - [library(renv)](https://rstudio.github.io/renv/)
-
-## Coding Standard
-
-### Level 1
-- [Tidyverse style guide](https://style.tidyverse.org)
-
-### Level 2
-- [library(lintr)](https://lintr.r-lib.org)
-- [library(styler)](https://styler.r-lib.org)
-
-## Modularize Code
-
-### Level 1
-- [functions](https://adv-r.hadley.nz/functions.html)
-
-### Level 2
-- [R6 classes](https://adv-r.hadley.nz/r6.html)
-
-## Safe Code
-
-- tryCatch
-- assertions
-
-## Document Code
-
-- [library(roxygen2)](https://roxygen2.r-lib.org)
-- [vignette](https://r-pkgs.org/vignettes.html)
-
-## Test your code
-
-### Level 1
-- [library(testthat)](https://testthat.r-lib.org)
-
-## It Works on My Machine! Part 2
 
 ### Level 2
 - Docker
 
 ## Test your code Part 2
 
-### Level 2
+### Level 2 Automate^2
 - CICD
 
