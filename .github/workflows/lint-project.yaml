@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      RENV_PATHS_ROOT: ~/.local/share/renv
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
@@ -25,19 +26,20 @@ jobs:
       - name: Install libcurl
         run: |
           sudo apt-get update && sudo apt-get install -u libcurl4-openssl-dev
-      
-      - name: Restore renv from cache
+
+      - name: Cache packages
         uses: actions/cache@v2
         with:
-          path: renv/library
-          key: renv-${{ hashFiles('renv.locl') }}
-          restore-keys: renv-
-        
-      - name: Sync renv with lockfile
-        shell: Rscript {0}
+          path: ${{ env.RENV_PATHS_ROOT }}
+          key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-renv-
+
+      - name: Restore packages
+        shell: Rscript(0)
         run: |
-          options(renv.config.cache.symlinks = FALSE)
-          renv::restore(clean = TRUE)
+          if (!requireNamesapce("renv", quietly = TRUE)) install.packages("renv")
+          renv::restore()
 
       - name: Lint root directory
         run: lintr::lint_dir()
