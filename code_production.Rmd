@@ -14,6 +14,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ### General Do*s*
 
 ### General Don't*s*
+- Implement what you don't need
 - Tackle many topics at all once
 - Strictly apply everything everywhere
 
@@ -54,6 +55,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ### Readability
 
 - 2000 LOC vs 300 lines of code
+- repeated code
 - meaningful code
 
 ### Level 1
