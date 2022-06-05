@@ -35,8 +35,8 @@ knitr::opts_chunk$set(echo = FALSE)
   - brackets
   - camel case, snake case
 - Appropriate object names
-  - variable names
-  - function names
+  - variable names - nouns
+  - function names - verbs
 
 ## Write Your Code
 
