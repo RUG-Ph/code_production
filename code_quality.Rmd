@@ -11,6 +11,12 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Intro
 
+### General Do*s*
+
+### General Don't*s*
+- Tackle many topics at all once
+- Strictly apply everything everywhere
+
 ## References For Your Code
 
 - [Advanced R](https://adv-r.hadley.nz)
@@ -31,23 +37,36 @@ knitr::opts_chunk$set(echo = FALSE)
   - variable names
   - function names
 
-### Level 1
+## Write Your Code
+
+### **L1** Style Guides
+
 - [Tidyverse style guide](https://style.tidyverse.org)
 - [Google R style guide](https://google.github.io/styleguide/Rguide.html)
 
-### Level 2 Automate styling
+### **L2** Automate styling
+
 - [library(lintr)](https://lintr.r-lib.org)
 - [library(styler)](https://styler.r-lib.org)
 
 ## Modularize Your Code
 
+### Readability
+
+- 2000 LOC vs 300 lines of code
+- meaningful code
+
 ### Level 1
+
 - [functions](https://adv-r.hadley.nz/functions.html)
 
 ### Level 2
+
 - [R6 classes](https://adv-r.hadley.nz/r6.html)
 
 ## Strengthen Your Code
+
+External I/O
 
 - [tryCatch()](https://adv-r.hadley.nz/conditions.html)
 - [library(checkmate)](https://mllg.github.io/checkmate)
@@ -60,6 +79,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ## Test Your Code
 
 ### Level 1
+
 - [library(testthat)](https://testthat.r-lib.org)
 - [library(checkmate)](https://mllg.github.io/checkmate)
 
@@ -71,26 +91,32 @@ knitr::opts_chunk$set(echo = FALSE)
 - data_analysis_xxxx.R
 
 ### Level 1
-- Git
-
-- Github
-- Bitbucket
+- [Git](https://git-scm.com/doc)
+- [Github](https://github.com)
+- [Bitbucket](https://bitbucket.org)
 
 ### Level 2
 - Branches
 - Pull requests
-- Git Flow
+- [Git Workflow](https://www.gitkraken.com/learn/git/git-flow)
+  - Git Flow
+  - Github Flow
 
 ## Run Your Code
 
 ### Level 1
+
 - [library(renv)](https://rstudio.github.io/renv/)
 
 ### Level 2
-- Docker
+
+- [Docker](https://www.docker.com/get-started/)
 
 ## Test your code Part 2
 
-### Level 2 Automate^2
-- CICD
+### Level 2 Automate\^2
 
+CICD
+- [Github Actions](https://docs.github.com/en/actions)
+  - [r-lib/actions](https://github.com/r-lib/actions)
+  - [Bitbucket Pipelines](https://support.atlassian.com/bitbucket-cloud/docs/get-started-with-bitbucket-pipelines/)
