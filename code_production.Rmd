@@ -18,6 +18,12 @@ knitr::opts_chunk$set(echo = FALSE)
 - Tackle many topics at all once
 - Strictly apply everything everywhere
 
+### About this list
+
+- Not arranged in any particular order
+- Not an all-encomapsing list
+- Not an in-depth discussion
+
 ## References For Your Code
 
 - [Advanced R](https://adv-r.hadley.nz)
