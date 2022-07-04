@@ -63,6 +63,7 @@ knitr::opts_chunk$set(echo = FALSE)
 - 2000 LOC vs 300 lines of code
 - repeated code
 - meaningful code
+- namespacing
 
 ### Level 1
 
@@ -73,6 +74,7 @@ Source code `R/02-*.R`
 ### Level 2
 
 - [R6 classes](https://adv-r.hadley.nz/r6.html), (https://r6.r-lib.org/articles/Introduction.html)
+- [Box modules](https://klmr.me/box/)
 
 Source code `R/03-*.R`
 
@@ -101,6 +103,12 @@ External I/O
 - data_analysis_1.R
 - data_analysis_2.R
 - data_analysis_xxxx.R
+
+- CLI
+- GUI
+  - [GitHub Desktop](https://desktop.github.com/)
+  - [SourceTreet](https://www.sourcetreeapp.com/)
+  = [RStudio](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN)
 
 ### Level 1
 - [Git](https://git-scm.com/doc)
