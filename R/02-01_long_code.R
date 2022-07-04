@@ -169,7 +169,7 @@ fit_ets <- ets(call_volume + 1, lambda = 0)
 plot(fit_ets)
 print(fit_ets)
 
-Infusion of scenarios to call volume time series
+# Infusion of scenarios to call volume time series
 
 scenario <- list(severity = -0.4663777, duration = 67, half = 3)
 model <- fit_ets
