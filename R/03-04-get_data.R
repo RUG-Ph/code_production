@@ -29,7 +29,7 @@ WikiData <- R6Class("WikiData",
     },
     compute_prices = function(startDateTxt, gicsSubIndustry) {
       symbol <- private$doc$symbol[tolower(private$doc$gics_sub_industry) == gicsSubIndustry]
-      
+
       startDate <- as.Date(startDateTxt)
       startYear <- as.numeric(format(startDate, '%Y'))
       startMonth <- as.numeric(format(startDate, '%m'))
@@ -47,7 +47,7 @@ WikiData <- R6Class("WikiData",
       private$prices <- prices
     },
     make_prices_df = function() {
-      prices_df <- data.frame(date=as.Date(prices), price=as.numeric(prices))
+      prices_df <- data.frame(date=as.Date(private$prices), price=as.numeric(private$prices))
       prices_df$delta <- c(NA, diff(prices_df$price, lag=1))
       
       private$prices_df <- prices_df
