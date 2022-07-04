@@ -6,7 +6,7 @@ installOrLoadPackage(c('httr','XML','tidyquant','forecast','repr'))
 
 source("R/02-04-get_data.R")
 source("R/02-05-historical_declines.R")
-source("R/02-06-scenario_bulding.R")
+source("R/02-06-scenario_building.R")
 source("R/02-07-recovery_forecast.R")
 
 # Identification of historical declines
