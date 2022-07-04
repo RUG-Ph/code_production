@@ -1,0 +1,124 @@
+---
+title: "Code Production"
+author: "Rad Basa"
+date: "6/3/2022"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Intro
+
+### General Do*s*
+
+### General Don't*s*
+- Implement what you don't need
+- Tackle many topics at all once
+- Strictly apply everything everywhere
+
+## References For Your Code
+
+- [Advanced R](https://adv-r.hadley.nz)
+- [R Packages](https://r-pkgs.org)
+
+## Tools For Your Code
+
+- [library(devtools)](https://devtools.r-lib.org)
+- [library(usethis)](https://usethis.r-lib.org/index.html)
+
+## Write Your Code
+
+- Choose one style
+  - indent spaces
+  - brackets
+  - camel case, snake case
+- Appropriate object names
+  - variable names - nouns
+  - function names - verbs
+
+## Write Your Code
+
+### **L1** Style Guides
+
+- [Tidyverse style guide](https://style.tidyverse.org)
+- [Google R style guide](https://google.github.io/styleguide/Rguide.html)
+
+### **L2** Automate styling
+
+- [library(lintr)](https://lintr.r-lib.org)
+- [library(styler)](https://styler.r-lib.org)
+
+## Modularize Your Code
+
+### Readability
+
+- 2000 LOC vs 300 lines of code
+- repeated code
+- meaningful code
+
+### Level 1
+
+- [functions](https://adv-r.hadley.nz/functions.html)
+
+### Level 2
+
+- [R6 classes](https://adv-r.hadley.nz/r6.html)
+
+## Strengthen Your Code
+
+External I/O
+
+- [tryCatch()](https://adv-r.hadley.nz/conditions.html)
+- [library(checkmate)](https://mllg.github.io/checkmate)
+
+## Document Your Code
+
+- [library(roxygen2)](https://roxygen2.r-lib.org)
+- [vignette](https://r-pkgs.org/vignettes.html)
+
+## Test Your Code
+
+### Level 1
+
+- [library(testthat)](https://testthat.r-lib.org)
+- [library(checkmate)](https://mllg.github.io/checkmate)
+
+## Manage Your Code
+
+- data_analysis.R
+- data_analysis_1.R
+- data_analysis_2.R
+- data_analysis_xxxx.R
+
+### Level 1
+- [Git](https://git-scm.com/doc)
+- [Github](https://github.com)
+- [Bitbucket](https://bitbucket.org)
+
+### Level 2
+- Branches
+- Pull requests
+- [Git Workflow](https://www.gitkraken.com/learn/git/git-flow)
+  - Git Flow
+  - Github Flow
+
+## Run Your Code
+
+### Level 1
+
+- [library(renv)](https://rstudio.github.io/renv/)
+
+### Level 2
+
+- [Docker](https://www.docker.com/get-started/)
+
+## Test your code Part 2
+
+### Level 2 Automate\^2
+
+CICD
+- [Github Actions](https://docs.github.com/en/actions)
+  - [r-lib/actions](https://github.com/r-lib/actions)
+  - [Bitbucket Pipelines](https://support.atlassian.com/bitbucket-cloud/docs/get-started-with-bitbucket-pipelines/)
