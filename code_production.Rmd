@@ -64,6 +64,11 @@ knitr::opts_chunk$set(echo = FALSE)
 
 Source code `R/01-*.R`
 
+```{r echo=TRUE, eval=FALSE}
+lintr::lint("R/01-01_lint_this.R")
+styler::style_file("R/01-01_lint_this.R")
+```
+
 ## Modularize Your Code
 
 - 2000 LOC vs 300 lines of code
