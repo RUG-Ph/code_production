@@ -1,4 +1,18 @@
 
+#' Get S&P 500 Constituents from Wikipedia
+#'
+#' Accesses Wikipedia and scrapes the table.
+#'
+#' @param url Wikipedia URL for S&P 500 companies
+#'
+#' @return Data.frame of the scraped data from Wikipedia 
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' url <- 'https://en.wikipedia.org/wiki/List_of_S%26P_500_companies'
+#' doc <- get_from_wikipedia(url)
+#' }
 get_from_wikipedia <- function(url) {
   checkmate::assert_string(url, pattern = "(https?|ftp)://[^\\s/$.?#].[^\\s]*")
 
@@ -25,6 +39,22 @@ get_from_wikipedia <- function(url) {
   return(doc)
 }
 
+
+#' Get the list of GICS Sub Industries
+#'
+#' Produces a list of unique GICS sub industries.
+#'
+#' @param doc Data.frame S&P 500 table scraped from Wikipedia
+#'
+#' @return Character vector of GICS sub industry categories
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' url <- 'https://en.wikipedia.org/wiki/List_of_S%26P_500_companies'
+#' doc <- get_from_wikipedia(url)
+#' gicsSubIndustryList <- make_gics_sub_industry_list(doc)
+#' }
 make_gics_sub_industry_list <- function(doc) {
   gicsSubIndustryList <- tolower(unique(doc$gics_sub_industry))
   gicsSubIndustryList <- gicsSubIndustryList[order(gicsSubIndustryList)]
@@ -32,6 +62,26 @@ make_gics_sub_industry_list <- function(doc) {
   return(gicsSubIndustryList)
 }
 
+#' Get Stock Prices from the Web
+#'
+#' Uses tidyquant package to retrieve daily stock prices.
+#'
+#' @param symbol Three letter company stock symbol
+#' @param startDateTxt Character date with yyyy-mm-dd format
+#'
+#' @return Time series data of monthly prices by year
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' url <- 'https://en.wikipedia.org/wiki/List_of_S%26P_500_companies'
+#' doc <- get_from_wikipedia(url)
+#' 
+#' startDateTxt <- '1995-01-01'
+#' gicsSubIndustry <- 'airlines'
+#' symbol <- doc$symbol[tolower(doc$gics_sub_industry) == gicsSubIndustry]
+#' prices <- get_prices(symbol, startDateTxt)
+#' }
 get_prices <- function(symbol, startDateTxt) {
   checkmate::assert_character(symbol, min.len = 1)
   checkmate::assert_date(as.Date(startDateTxt))
@@ -61,6 +111,24 @@ get_prices <- function(symbol, startDateTxt) {
   return(prices)
 }
 
+#' Convert time series data into long format
+#'
+#' @param prices Time series data of monthly prices by year
+#'
+#' @return Long format data.frame of time series data
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' url <- 'https://en.wikipedia.org/wiki/List_of_S%26P_500_companies'
+#' doc <- get_from_wikipedia(url)
+#' 
+#' startDateTxt <- '1995-01-01'
+#' gicsSubIndustry <- 'airlines'
+#' symbol <- doc$symbol[tolower(doc$gics_sub_industry) == gicsSubIndustry]
+#' prices <- get_prices(symbol, startDateTxt)
+#' prices_df <- get_prices_df(prices)
+#' }
 get_prices_df <- function(prices) {
   prices_df <- data.frame(date=as.Date(prices), price=as.numeric(prices))
   prices_df$delta <- c(NA, diff(prices_df$price, lag=1))
