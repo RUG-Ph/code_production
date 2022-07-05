@@ -110,6 +110,12 @@ Let others know what your code does. This includes your future self.
 - [library(roxygen2)](https://roxygen2.r-lib.org)
 - [vignette](https://r-pkgs.org/vignettes.html)
 
+Source code `R/05-*.R`
+
+```{r echo=TRUE, eval=FALSE}
+
+```
+
 ## Test Your Code
 
 Make sure your code works as expected.
