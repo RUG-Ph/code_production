@@ -86,7 +86,7 @@ Source code `R/02-*.R`
 ## Modularize Your Code
 ### **L2** R6 Classes and Box modules
 
-- [R6 classes](https://adv-r.hadley.nz/r6.html), (https://r6.r-lib.org/articles/Introduction.html)
+- [R6 classes](https://r6.r-lib.org/articles/Introduction.html)
 - [Box modules](https://klmr.me/box/)
 
 Source code `R/03-*.R`
@@ -136,11 +136,14 @@ testthat::test_dir("tests/testthat")
 - data_analysis_2.R
 - data_analysis_xxxx.R
 
+## Manage Your Code
+### Tools
+
 - CLI
 - GUI
   - [GitHub Desktop](https://desktop.github.com/)
-  - [SourceTreet](https://www.sourcetreeapp.com/)
-  = [RStudio](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN)
+  - [SourceTree](https://www.sourcetreeapp.com/)
+  - [RStudio](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN)
 
 ## Manage Your Code
 ### **L1** Version Control System
@@ -178,5 +181,6 @@ Manage your run-time environment for reproducibility
 
 CICD
 - [Github Actions](https://docs.github.com/en/actions)
+
   - [r-lib/actions](https://github.com/r-lib/actions)
   - [Bitbucket Pipelines](https://support.atlassian.com/bitbucket-cloud/docs/get-started-with-bitbucket-pipelines/)
