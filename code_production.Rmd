@@ -112,10 +112,6 @@ Let others know what your code does. This includes your future self.
 
 Source code `R/05-*.R`
 
-```{r echo=TRUE, eval=FALSE}
-
-```
-
 ## Test Your Code
 
 Make sure your code works as expected.
