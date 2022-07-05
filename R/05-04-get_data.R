@@ -1,3 +1,6 @@
+library(httr)
+library(XML)
+library(tidyquant)
 
 #' Get S&P 500 Constituents from Wikipedia
 #'
