@@ -1,5 +1,6 @@
-library(lintr)
-library(styler)
-library(devtools)
-library(usethis)
-library(testthat)
+# Dependencies for renv
+library(httr)
+library(XML)
+library(tidyquant)
+library(forecast)
+library(repr)
