@@ -125,6 +125,14 @@ Make sure your code works as expected.
 - [library(testthat)](https://testthat.r-lib.org)
 - [library(checkmate)](https://mllg.github.io/checkmate)
 
+Source code `R/06-*.R`
+
+Test code `tests/testthat/`
+
+```{r echo=TRUE, eval=FALSE}
+testthat::test_dir("tests/testthat")
+```
+
 ## Manage Your Code
 
 - data_analysis.R
