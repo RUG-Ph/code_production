@@ -11,6 +11,15 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Intro
 
+Slides:
+
+https://rug-ph.github.io/code_production_slides
+
+
+Repository:
+
+https://github.com/RUG-Ph/code_production
+
 ## Who is this for? 
 
 - I work alone
@@ -27,7 +36,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## General Don't*s*
 - Implement what you don't need
-- Tackle many topics at all once
+- Tackle many topics all at once
 - Strictly apply everything everywhere
 
 ## References For Improving Your Code
@@ -47,8 +56,8 @@ knitr::opts_chunk$set(echo = FALSE)
   - brackets
   - camel case, snake case
 - Appropriate object names
-  - variable names - nouns
-  - function names - verbs
+  - variable names &rarr; nouns
+  - function names &rarr; verbs
 
 ## Write Your Code 
 ### **L1** Style Guides
@@ -74,7 +83,7 @@ styler::style_file("R/01-01_lint_this.R")
 - 2000 LOC vs 300 lines of code
 - repeated code
 - meaningful code
-- namespacing
+- namespacing &rarr; re-use of object names
 
 ## Modularize Your Code
 ### **L1** Functions
@@ -116,7 +125,7 @@ Source code `R/05-*.R`
 
 Make sure your code works as expected.
 
-### **L1** Tests
+### **L1** Automate Tests
 
 - [library(testthat)](https://testthat.r-lib.org)
 - [library(checkmate)](https://mllg.github.io/checkmate)
@@ -177,7 +186,7 @@ Manage your run-time environment for reproducibility
 - [Docker](https://www.docker.com/get-started/)
 
 ## Test your code Part 2
-### **L2** Automate\^2
+### **L2** Automate^2^
 
 CICD
 - [Github Actions](https://docs.github.com/en/actions)
