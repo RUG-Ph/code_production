@@ -1,0 +1,11 @@
+# Dependencies for renv
+library(httr)
+library(XML)
+library(tidyquant)
+library(forecast)
+library(repr)
+library(lintr)
+library(styler)
+library(R6)
+library(testthat)
+library(checkmate)

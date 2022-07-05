@@ -1,0 +1,195 @@
+---
+title: "Software Engineering Best Practices in R for Data Scientists"
+author: "R Users Group Philippines"
+date: "7/20/2022"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Intro
+
+Slides:
+
+https://rug-ph.github.io/code_production_slides
+
+
+Repository:
+
+https://github.com/RUG-Ph/code_production
+
+## Who is this for? 
+
+- I work alone
+- I work in a team of R developers
+- I want to share my code with others
+- I want to write and publish a package to CRAN
+
+## What are we discussing today?
+
+- What? and Why?
+- How about the How?
+- Not arranged in any particular order
+- Not an all-encompassing list
+
+## General Don't*s*
+- Implement what you don't need
+- Tackle many topics all at once
+- Strictly apply everything everywhere
+
+## References For Improving Your Code
+
+- [Advanced R](https://adv-r.hadley.nz)
+- [R Packages](https://r-pkgs.org)
+
+## Tools For Your Code
+
+- [library(devtools)](https://devtools.r-lib.org)
+- [library(usethis)](https://usethis.r-lib.org/index.html)
+
+## Write Your Code
+
+- Choose one style
+  - indent spaces
+  - brackets
+  - camel case, snake case
+- Appropriate object names
+  - variable names &rarr; nouns
+  - function names &rarr; verbs
+
+## Write Your Code 
+### **L1** Style Guides
+
+- [Tidyverse style guide](https://style.tidyverse.org)
+- [Google R style guide](https://google.github.io/styleguide/Rguide.html)
+
+## Write Your Code
+### **L2** Automate styling
+
+- [library(lintr)](https://lintr.r-lib.org)
+- [library(styler)](https://styler.r-lib.org)
+
+Source code `R/01-*.R`
+
+```{r echo=TRUE, eval=FALSE}
+lintr::lint("R/01-01_lint_this.R")
+styler::style_file("R/01-01_lint_this.R")
+```
+
+## Modularize Your Code
+
+- 2000 LOC vs 300 lines of code
+- repeated code
+- meaningful code
+- namespacing &rarr; re-use of object names
+
+## Modularize Your Code
+### **L1** Functions
+
+- [functions](https://adv-r.hadley.nz/functions.html)
+
+Source code `R/02-*.R`
+
+## Modularize Your Code
+### **L2** R6 Classes and Box modules
+
+- [R6 classes](https://r6.r-lib.org/articles/Introduction.html)
+- [Box modules](https://klmr.me/box/)
+
+Source code `R/03-*.R`
+
+## Strengthen Your Code
+
+- Stop execution when invalid input is provided.
+- GIGO
+
+### External I/O
+
+- [tryCatch()](https://adv-r.hadley.nz/conditions.html)
+- [library(checkmate)](https://mllg.github.io/checkmate)
+
+Source code `R/04-*.R`
+
+## Document Your Code
+
+Let others know what your code does. This includes your future self. 
+
+- [library(roxygen2)](https://roxygen2.r-lib.org)
+- [vignette](https://r-pkgs.org/vignettes.html)
+
+Source code `R/05-*.R`
+
+## Test Your Code
+
+Make sure your code works as expected.
+
+### **L1** Automate Tests
+
+- [library(testthat)](https://testthat.r-lib.org)
+- [library(checkmate)](https://mllg.github.io/checkmate)
+
+Source code `R/06-*.R`
+
+Test code `tests/testthat/`
+
+```{r echo=TRUE, eval=FALSE}
+testthat::test_dir("tests/testthat")
+```
+
+## Manage Your Code
+
+- data_analysis.R
+- data_analysis_1.R
+- data_analysis_2.R
+- data_analysis_xxxx.R
+
+## Manage Your Code
+### Tools
+
+- CLI
+- GUI
+  - [GitHub Desktop](https://desktop.github.com/)
+  - [SourceTree](https://www.sourcetreeapp.com/)
+  - [RStudio](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN)
+
+## Manage Your Code
+### **L1** Version Control System
+- [Git](https://git-scm.com/doc)
+- [Github](https://github.com)
+- [Bitbucket](https://bitbucket.org)
+
+## Manage Your Code
+### **L2** Advanced VCS
+- Branches
+- Pull requests
+- [Git Workflow](https://www.gitkraken.com/learn/git/git-flow)
+  - Git Flow
+  - Github Flow
+
+## Run Your Code
+
+Manage your run-time environment for reproducibility
+
+- R version
+- libraries and their versions
+
+## Run Your Code
+### **L1** Renv
+
+- [library(renv)](https://rstudio.github.io/renv/)
+
+## Run Your Code
+### **L2** Containers
+
+- [Docker](https://www.docker.com/get-started/)
+
+## Test your code Part 2
+### **L2** Automate^2^
+
+CICD
+- [Github Actions](https://docs.github.com/en/actions)
+
+  - [r-lib/actions](https://github.com/r-lib/actions)
+  - [Bitbucket Pipelines](https://support.atlassian.com/bitbucket-cloud/docs/get-started-with-bitbucket-pipelines/)
