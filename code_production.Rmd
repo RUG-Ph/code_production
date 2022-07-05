@@ -1,7 +1,7 @@
 ---
-title: "Code Production"
-author: "Rad Basa"
-date: "6/3/2022"
+title: "Software Engineering Best Practices in R for Data Scientists"
+author: "R Users Group Philippines"
+date: "7/20/2022"
 output: ioslides_presentation
 ---
 
@@ -11,20 +11,26 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Intro
 
-### General Do*s*
+## Who is this for? 
 
-### General Don't*s*
+- I work alone
+- I work in a team of R developers
+- I want to share my code with others
+- I want to write and publish a package to CRAN
+
+## What are we discussing today?
+
+- What? and Why?
+- How about the How?
+- Not arranged in any particular order
+- Not an all-encompassing list
+
+## General Don't*s*
 - Implement what you don't need
 - Tackle many topics at all once
 - Strictly apply everything everywhere
 
-### About this list
-
-- Not arranged in any particular order
-- Not an all-encomapsing list
-- Not an in-depth discussion
-
-## References For Your Code
+## References For Improving Your Code
 
 - [Advanced R](https://adv-r.hadley.nz)
 - [R Packages](https://r-pkgs.org)
@@ -44,34 +50,36 @@ knitr::opts_chunk$set(echo = FALSE)
   - variable names - nouns
   - function names - verbs
 
-## Write Your Code
-
+## Write Your Code 
 ### **L1** Style Guides
 
 - [Tidyverse style guide](https://style.tidyverse.org)
 - [Google R style guide](https://google.github.io/styleguide/Rguide.html)
 
+## Write Your Code
 ### **L2** Automate styling
 
 - [library(lintr)](https://lintr.r-lib.org)
 - [library(styler)](https://styler.r-lib.org)
 
-## Modularize Your Code
+Source code `R/01-*.R`
 
-### Readability
+## Modularize Your Code
 
 - 2000 LOC vs 300 lines of code
 - repeated code
 - meaningful code
 - namespacing
 
-### Level 1
+## Modularize Your Code
+### **L1** Functions
 
 - [functions](https://adv-r.hadley.nz/functions.html)
 
 Source code `R/02-*.R`
 
-### Level 2
+## Modularize Your Code
+### **L2** R6 Classes and Box modules
 
 - [R6 classes](https://adv-r.hadley.nz/r6.html), (https://r6.r-lib.org/articles/Introduction.html)
 - [Box modules](https://klmr.me/box/)
@@ -80,19 +88,28 @@ Source code `R/03-*.R`
 
 ## Strengthen Your Code
 
-External I/O
+- Stop execution when invalid input is provided.
+- GIGO
+
+### External I/O
 
 - [tryCatch()](https://adv-r.hadley.nz/conditions.html)
 - [library(checkmate)](https://mllg.github.io/checkmate)
 
+Source code `R/04-*.R`
+
 ## Document Your Code
+
+Let others know what your code does. This includes your future self. 
 
 - [library(roxygen2)](https://roxygen2.r-lib.org)
 - [vignette](https://r-pkgs.org/vignettes.html)
 
 ## Test Your Code
 
-### Level 1
+Make sure your code works as expected.
+
+### **L1** Tests
 
 - [library(testthat)](https://testthat.r-lib.org)
 - [library(checkmate)](https://mllg.github.io/checkmate)
@@ -110,12 +127,14 @@ External I/O
   - [SourceTreet](https://www.sourcetreeapp.com/)
   = [RStudio](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN)
 
-### Level 1
+## Manage Your Code
+### **L1** Version Control System
 - [Git](https://git-scm.com/doc)
 - [Github](https://github.com)
 - [Bitbucket](https://bitbucket.org)
 
-### Level 2
+## Manage Your Code
+### **L2** Advanced VCS
 - Branches
 - Pull requests
 - [Git Workflow](https://www.gitkraken.com/learn/git/git-flow)
@@ -124,17 +143,23 @@ External I/O
 
 ## Run Your Code
 
-### Level 1
+Manage your run-time environment for reproducibility
+
+- R version
+- libraries and their versions
+
+## Run Your Code
+### **L1** Renv
 
 - [library(renv)](https://rstudio.github.io/renv/)
 
-### Level 2
+## Run Your Code
+### **L2** Containers
 
 - [Docker](https://www.docker.com/get-started/)
 
 ## Test your code Part 2
-
-### Level 2 Automate\^2
+### **L2** Automate\^2
 
 CICD
 - [Github Actions](https://docs.github.com/en/actions)
