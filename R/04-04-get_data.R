@@ -40,7 +40,15 @@ get_prices <- function(symbol, startDateTxt) {
   startYear <- as.numeric(format(startDate, '%Y'))
   startMonth <- as.numeric(format(startDate, '%m'))
   
-  prices  <- tq_get(x = symbol, get = 'stock.prices', from = startDateTxt)
+  prices <- tryCatch(
+    {
+      tq_get(x = symbol, get = 'stock.prices', from = startDateTxt)
+    },
+    error = function(e) {
+      print(e)
+    }
+  )
+  
   prices$sales <- prices$volume * prices$adjusted
   prices$month <- format(prices$date, '%Y-%m')
   volume <- aggregate(volume ~ month, data=prices, FUN=sum)
