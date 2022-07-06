@@ -1,8 +1,10 @@
 ---
 title: "Software Engineering Best Practices in R for Data Scientists"
-author: "R Users Group Philippines"
+author: "Rodrigo Basa [R Users Group Philippines]"
 date: "7/20/2022"
-output: ioslides_presentation
+output: 
+  ioslides_presentation:
+    css: styles.css
 ---
 
 ```{r setup, include=FALSE}
@@ -10,6 +12,12 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## Intro
+
+### Demystify "Software Engineering" 
+
+> Systematic approach to writing good code
+
+## Links
 
 Slides:
 
@@ -26,17 +34,18 @@ https://github.com/RUG-Ph/code_production
 - I work in a team of R developers
 - I want to share my code with others
 - I want to write and publish a package to CRAN
+- I need to make my code ready for *production*
 
 ## What are we discussing today?
 
 - What? and Why?
-- How about the How?
+- "How about the How?"
 - Not arranged in any particular order
 - Not an all-encompassing list
 
 ## General Don't*s*
 - Implement what you don't need
-- Tackle many topics all at once
+- Try to learn many topics all at once
 - Strictly apply everything everywhere
 
 ## References For Improving Your Code
@@ -84,6 +93,8 @@ styler::style_file("R/01-01_lint_this.R")
 - repeated code
 - meaningful code
 - namespacing &rarr; re-use of object names
+
+Source code `R/02-01_long_code.R`
 
 ## Modularize Your Code
 ### **L1** Functions
@@ -160,10 +171,12 @@ testthat::test_dir("tests/testthat")
 - [Github](https://github.com)
 - [Bitbucket](https://bitbucket.org)
 
+[Example commit history](https://github.com/RUG-Ph/code_production/commits/main)
+
 ## Manage Your Code
 ### **L2** Advanced VCS
-- Branches
-- Pull requests
+- Branches ([Example](https://github.com/RUG-Ph/code_production/branches))
+- Pull requests ([Example](https://github.com/RUG-Ph/code_production/pulls?q=is%3Apr))
 - [Git Workflow](https://www.gitkraken.com/learn/git/git-flow)
   - Git Flow
   - Github Flow
@@ -180,6 +193,8 @@ Manage your run-time environment for reproducibility
 
 - [library(renv)](https://rstudio.github.io/renv/)
 
+Source code `renv.lock`
+
 ## Run Your Code
 ### **L2** Containers
 
@@ -189,7 +204,9 @@ Manage your run-time environment for reproducibility
 ### **L2** Automate^2^
 
 CICD
-- [Github Actions](https://docs.github.com/en/actions)
+- [Github Actions](https://docs.github.com/en/actions) ([Example](https://github.com/RUG-Ph/code_production/actions))
 
   - [r-lib/actions](https://github.com/r-lib/actions)
   - [Bitbucket Pipelines](https://support.atlassian.com/bitbucket-cloud/docs/get-started-with-bitbucket-pipelines/)
+  
+Source code `.github/workflows/lint-project.yaml`
