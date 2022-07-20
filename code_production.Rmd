@@ -132,6 +132,20 @@ Let others know what your code does. This includes your future self.
 
 Source code `R/05-*.R`
 
+## Config for Your Code
+
+All your assigned values in one place.
+
+- simple `config.R` file
+- [library(config)](https://rstudio.github.io/config/)
+
+## Log Your Code
+
+Know what is going on while your script is running.
+
+- [library(logger)](https://daroczig.github.io/logger/)
+- [library(futile.logger)](https://github.com/zatonovo/futile.logger)
+
 ## Test Your Code
 
 Make sure your code works as expected.
