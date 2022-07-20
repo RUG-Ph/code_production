@@ -123,6 +123,12 @@ Source code `R/03-*.R`
 
 Source code `R/04-*.R`
 
+## Strengthen Your Code
+
+### SQL and other DB queries
+
+- [Safe Queries](https://db.rstudio.com/best-practices/run-queries-safely/)
+
 ## Document Your Code
 
 Let others know what your code does. This includes your future self. 
